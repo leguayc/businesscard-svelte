@@ -1,0 +1,1 @@
+<p>Only here to show the architecture. Remove it when you'll develop a view.</p>
