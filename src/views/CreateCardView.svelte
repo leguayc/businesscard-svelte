@@ -2,16 +2,7 @@
     import * as BCH from '../helpers/BusinessCardHelper.js';
     import BusinessCard from '../components/BusinessCard.svelte';
     import FieldArea from '../components/FieldArea.svelte';
-
-    let firstname = "";
-    let lastname = "";
-    let phoneNumber = "";
-    let email = "";
-    let job = "";
-    let title = "Mr";
-    let address = "";
-    let cp = "";
-    let city = "";
+	import { cardInfo } from '../stores/cardInfo.js';
 
     let forceValidation = false;
 
@@ -26,7 +17,7 @@
 
 <div class="main">
     <section class="cardpreview">
-        <BusinessCard title={title} firstname={firstname} lastname={lastname} address={address} cp={cp} city={city} phoneNumber={phoneNumber} email={email} job={job} />
+        <BusinessCard />
     </section>
     
     <section class="form">
@@ -37,7 +28,7 @@
             <div class="fieldRow">
                 <div id="selectTitle">
                     <label for="cars">Title</label>
-                    <select name="title" bind:value={title}>
+                    <select name="title" bind:value={$cardInfo.title}>
                         <option value="Mr">Mister</option>
                         <option value="M">Miss</option>
                         <option value="Dr">Doctor</option>
@@ -47,23 +38,23 @@
             </div>
 
             <div class="fieldRow">
-                <FieldArea bind:value={firstname} displayName="First Name" fieldName="firstname" forceValidation={forceValidation} requireUpperFirstChar />
-                <FieldArea bind:value={lastname} displayName="Last Name" fieldName="lastname" forceValidation={forceValidation} requireUpperFirstChar />
+                <FieldArea bind:value={$cardInfo.firstname} displayName="First Name" fieldName="firstname" forceValidation={forceValidation} requireUpperFirstChar />
+                <FieldArea bind:value={$cardInfo.lastname} displayName="Last Name" fieldName="lastname" forceValidation={forceValidation} requireUpperFirstChar />
             </div>
     
             <div class="fieldRow">
-                <FieldArea bind:value={phoneNumber} displayName="Phone Number" fieldName="phoneNumber" forceValidation={forceValidation} />
-                <FieldArea bind:value={email} displayName="Email" fieldName="email" forceValidation={forceValidation} />
+                <FieldArea bind:value={$cardInfo.phoneNumber} displayName="Phone Number" fieldName="phoneNumber" forceValidation={forceValidation} />
+                <FieldArea bind:value={$cardInfo.email} displayName="Email" fieldName="email" forceValidation={forceValidation} />
             </div>
     
             <div class="fieldRow">
-                <FieldArea bind:value={job} displayName="Job" fieldName="job" forceValidation={forceValidation} requireUpperFirstChar />
-                <FieldArea bind:value={address} displayName="Address" fieldName="address" forceValidation={forceValidation} />
+                <FieldArea bind:value={$cardInfo.job} displayName="Job" fieldName="job" forceValidation={forceValidation} requireUpperFirstChar />
+                <FieldArea bind:value={$cardInfo.address} displayName="Address" fieldName="address" forceValidation={forceValidation} />
             </div>
             
             <div class="fieldRow">
-                <FieldArea bind:value={cp} displayName="Postal Code" fieldName="cp" forceValidation={forceValidation} />
-                <FieldArea bind:value={city} displayName="City" fieldName="city" forceValidation={forceValidation} requireUpperFirstChar />
+                <FieldArea bind:value={$cardInfo.cp} displayName="Postal Code" fieldName="cp" forceValidation={forceValidation} />
+                <FieldArea bind:value={$cardInfo.city} displayName="City" fieldName="city" forceValidation={forceValidation} requireUpperFirstChar />
             </div>
         </form>
     
