@@ -1,5 +1,5 @@
 <script>
-    import * as BCH from '../helpers/BusinessCardHelper.js';
+    import { validateField, getPlaceHolderOf } from '../helpers/BusinessCardHelper.js';
 
     export let value = "";
     export let displayName = "Name";
@@ -11,7 +11,7 @@
     export let forceValidation = false;
 
     let validate = (val) => {
-        isValid = BCH.validateField(val, fieldName);
+        isValid = validateField(val, fieldName);
     }
 
     $: {
@@ -33,13 +33,13 @@
 
     <!-- Choose input type -->
     {#if inputType == "text"}
-        <input type="text" name={fieldName} required placeholder={BCH.getPlaceHolderOf(fieldName)} bind:value={value} />
+        <input type="text" name={fieldName} required placeholder={getPlaceHolderOf(fieldName)} bind:value={value} />
     {:else if inputType == "email"}
-        <input type="email" name={fieldName} required placeholder={BCH.getPlaceHolderOf(fieldName)} bind:value={value} />
+        <input type="email" name={fieldName} required placeholder={getPlaceHolderOf(fieldName)} bind:value={value} />
     {:else if inputType == "tel"}
-        <input type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" name={fieldName} required placeholder={BCH.getPlaceHolderOf(fieldName)} bind:value={value} />
+        <input type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" name={fieldName} required placeholder={getPlaceHolderOf(fieldName)} bind:value={value} />
     {:else if inputType == "number"}
-        <input type="number" name={fieldName} required placeholder={BCH.getPlaceHolderOf(fieldName)} bind:value={value} />
+        <input type="number" name={fieldName} required placeholder={getPlaceHolderOf(fieldName)} bind:value={value} />
     {/if}
     
     <!-- Wrapper to avoid changing height -->

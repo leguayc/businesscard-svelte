@@ -59,4 +59,18 @@ export function initValue(value, fieldName) {
     } else {
         return value;
     }
-} 
+}
+
+export function getPlaceHolderInfo(cardInfo) {
+    return {
+        firstname : initValue(cardInfo.firstname, "firstname"), 
+        lastname : initValue(cardInfo.lastname, "lastname"),
+        phoneNumber : initValue(cardInfo.phoneNumber, "phoneNumber"),
+        email : initValue(cardInfo.email, "email"),
+        job : initValue(cardInfo.job, "job"),
+        title : cardInfo.title,
+        address : initValue(cardInfo.address, "address"),
+        cp : initValue(cardInfo.cp, "cp"),
+        city : initValue(cardInfo.city, "city")
+    };
+}
