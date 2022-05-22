@@ -13,13 +13,23 @@
             console.log("Validation success !");
         }
     }
+
+    let templates = [
+		{ id: 0, className: 'template-box active' },
+		{ id: 1, className: 'template-box' },
+		{ id: 2, className: 'template-box' }
+	];
+
+    let setTemplateActive = (id) => {
+        templates[$cardInfo.templateId].className = 'template-box';
+        templates[id].className = 'template-box active';
+        $cardInfo.templateId = id;
+    }
 </script>
     <article class="container">
     <div class="form-preview-card">
         <section class="card-preview">
-            <!-- 
             <BusinessCard />
-            -->
         </section>
         <section class="form">
             <h1>Créer ta carte de visite</h1>
@@ -82,9 +92,9 @@
             <h2>Choisis ton template</h2>
             <aside class="all-templates">
                 <!-- toggle class active -->
-                <div class="template-box active"></div>
-                <div class="template-box"></div>
-                <div class="template-box"></div>
+                {#each templates as template}
+                    <div class={template.className} on:click={() => setTemplateActive(template.id)}></div>
+                {/each}
             </aside>
             <button class="button-custom button-blue" on:click={save}>Suivant</button>
         </section>

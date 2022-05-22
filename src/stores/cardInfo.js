@@ -9,5 +9,6 @@ export const cardInfo = writable({
     title : "Mr",
     address : "",
     cp : "",
-    city : ""
+    city : "",
+    templateId : 0
 });

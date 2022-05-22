@@ -1,34 +1,26 @@
 <script>
-    import * as BCH from '../helpers/BusinessCardHelper.js';
+    import { getPlaceHolderInfo } from '../helpers/BusinessCardHelper.js';
 	import { cardInfo } from '../stores/cardInfo.js';
+    import BCTemplate0 from './bc-templates/BCTemplate0.svelte';
+    import BCTemplate1 from './bc-templates/BCTemplate1.svelte';
+    import BCTemplate2 from './bc-templates/BCTemplate2.svelte';
 
-	export let className = '';
-    let cardInfoPreview = cardInfo;
+    let cardInfoPreview = $cardInfo;
 
     /** We are using a second object (cardInfoPreview) so that we are able to get placeholder values without overwriting real data */
     $: {
-        cardInfoPreview = {
-            firstname : BCH.initValue($cardInfo.firstname, "firstname"), 
-            lastname : BCH.initValue($cardInfo.lastname, "lastname"),
-            phoneNumber : BCH.initValue($cardInfo.phoneNumber, "phoneNumber"),
-            email : BCH.initValue($cardInfo.email, "email"),
-            job : BCH.initValue($cardInfo.job, "job"),
-            title : $cardInfo.title,
-            address : BCH.initValue($cardInfo.address, "address"),
-            cp : BCH.initValue($cardInfo.cp, "cp"),
-            city : BCH.initValue($cardInfo.city, "city")
-        }
+        cardInfoPreview = getPlaceHolderInfo($cardInfo);
     }
 
-    className = 'businessCard ' + className;
+    let templates = [
+        BCTemplate0,
+        BCTemplate1,
+        BCTemplate2
+    ];
 </script>
 
-<div class={className}>
-    <p>{cardInfoPreview.title}. {cardInfoPreview.firstname} {cardInfoPreview.lastname}</p>
-    <p>{cardInfoPreview.job}</p>
-    <p>{cardInfoPreview.address}, {cardInfoPreview.cp} {cardInfoPreview.city}</p>
-    <p>{cardInfoPreview.phoneNumber}</p>
-    <p>{cardInfoPreview.email}</p>
+<div class="businessCard">
+    <svelte:component this={templates[$cardInfo.templateId]} cardInfo={cardInfoPreview} />
 </div>
 
 <style>
