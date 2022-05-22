@@ -2,8 +2,23 @@
     export let cardInfo = {};
 </script>
 
-<p>{cardInfo.title}. {cardInfo.firstname} {cardInfo.lastname}</p>
-<p>{cardInfo.job}</p>
-<p>{cardInfo.address}, {cardInfo.cp} {cardInfo.city}</p>
-<p>{cardInfo.phoneNumber}</p>
-<p>{cardInfo.email}</p>
+
+<aside class="template-card-0">
+    <div class="logo-card">
+        <img src="./img/uber.svg">
+    </div>
+    <div class="infos-card">
+
+        <div class="header-card">
+            <p>{cardInfo.title}. {cardInfo.firstname} {cardInfo.lastname}</p>
+            <p>{cardInfo.job}</p>
+        </div>
+        <p class="email item-card">{cardInfo.email}</p>
+        <p class="phone item-card">{cardInfo.phoneNumber}</p>
+        <div class="address item-card">
+        <p>{cardInfo.address},</p>
+        <p >{cardInfo.cp}, {cardInfo.city}</p>
+        </div>
+
+    </div>
+</aside>

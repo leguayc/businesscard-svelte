@@ -58,7 +58,6 @@ table {
 ** General 
 */
 body {
-  overflow: hidden;
   background-color: #EDEEF7;
 }
 
@@ -71,7 +70,7 @@ body {
 /*
 ** Text 
 */
-.regular, .home .text-home p, .form-preview-card .form .form-row .form-select select, .form-preview-card .form .form-row .form-item .error-wrapper small, .form-preview-card .form .form-row .form-item input {
+.regular, .home .text-home p, .form-preview-card .form .form-row .form-select select, .form-preview-card .form .form-row .form-item .error-wrapper small, .form-preview-card .form .form-row .form-item input, .template-card-0 .infos-card p {
   font-family: 'Satoshi-Regular';
 }
 
@@ -79,7 +78,7 @@ body {
   font-family: 'Satoshi-Medium';
 }
 
-.bold, .button-custom, .home .text-home h1, .form-preview-card .form > h1, .form-preview-card .form > h2 {
+.bold, .button-custom, .home .text-home h1, .form-preview-card .form > h1, .form-preview-card .form > h2, .template-card-0 .infos-card .header-card p {
   font-family: 'Satoshi-Bold';
 }
 
@@ -384,5 +383,106 @@ body {
   z-index: 999;
   right: -7%;
   top: -8%;
+}
+
+.business-card {
+  width: 558px;
+  height: 310px;
+}
+
+/*
+** Template 0
+*/
+.template-card-0 {
+  background-color: red;
+  width: 100%;
+  height: 100%;
+  background-color: #2B2B2B;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.template-card-0 .logo-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 55%;
+}
+
+.template-card-0 .infos-card {
+  width: 45%;
+  border-left: 1px solid white;
+  padding-left: 26px;
+  padding-block: 10px;
+}
+
+.template-card-0 .infos-card p {
+  color: white;
+  font-size: 15px;
+  margin-bottom: 21px;
+}
+
+.template-card-0 .infos-card .item-card {
+  position: relative;
+  margin-left: 1.5em;
+}
+
+.template-card-0 .infos-card .email::before {
+  content: url("../img/Frame.svg");
+  position: absolute;
+  left: -1.5em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.template-card-0 .infos-card .phone::before {
+  content: url("../img/Frame-1.svg");
+  position: absolute;
+  left: -1.5em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.template-card-0 .infos-card .address {
+  margin-bottom: 0px !important;
+}
+
+.template-card-0 .infos-card .address::before {
+  content: url("../img/Frame-2.svg");
+  position: absolute;
+  left: -1.5em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.template-card-0 .infos-card .address p {
+  margin-bottom: 5px;
+}
+
+.template-card-0 .infos-card .header-card {
+  margin-bottom: 33px;
+}
+
+.template-card-0 .infos-card .header-card p:first-child {
+  font-size: 20px !important;
+  margin-bottom: 5px;
 }
 /*# sourceMappingURL=main.css.map */

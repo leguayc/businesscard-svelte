@@ -19,12 +19,7 @@
     ];
 </script>
 
-<div class="businessCard">
+
+<div class="business-card">
     <svelte:component this={templates[$cardInfo.templateId]} cardInfo={cardInfoPreview} />
 </div>
-
-<style>
-    .businessCard {
-        background-color: red;
-    }
-</style>
