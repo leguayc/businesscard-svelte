@@ -21,7 +21,7 @@
     </section>
     
     <section class="form">
-        <h1>Start editing your card</h1>
+        <h1>Crée ta carte de visite</h1>
     
         <h2>Informations</h2>
         <form>

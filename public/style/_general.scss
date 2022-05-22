@@ -1,0 +1,127 @@
+/*
+** General 
+*/
+
+body{
+       overflow: hidden;
+}
+.container{
+   max-width: 85%;
+   margin: 0 auto;
+   width: 85%; 
+}
+
+/*
+** Text 
+*/
+
+.regular{
+  font-family: 'Satoshi-Regular';
+}
+
+.bold{
+      font-family: 'Satoshi-Bold';
+
+}
+
+
+/*
+** Button 
+*/
+
+.button-custom{
+    padding: 10px 20px;
+    border-radius: 6px;
+    @extend .bold;
+    font-size: 15px;
+        color: white;
+
+}
+
+.button-blue{
+    background-color: $blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::after{
+        content: url('../img/arrow.svg');
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 7px;
+    }
+}
+.button-black{
+    background-color: $black;
+}
+
+
+
+/*
+** Home 
+*/
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width:990px){
+        flex-direction: column-reverse;
+    }
+    .text-home{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @media (max-width:990px){
+        width: 100%;
+        height: 50vh;
+        
+    }
+        h1{
+            margin-bottom: 48px;
+            font-size: 70px;
+            color: $blue;
+            @extend .bold;
+        }
+        p{
+            margin-bottom: 54px;
+            font-size: 20px;
+            line-height: 22px;
+            color: $black;
+            @extend .regular
+        }
+        .home-button{
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+        }
+    }
+    .img-home{
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @media (max-width:990px){
+        width: 90%;
+        height: 50vh;
+    }
+    @media (max-width:660px) {
+        height: 35vh;
+    }
+        img{
+            width: 100%;
+        }
+        &::before{
+            content: url('../img/background.png');
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            height: 100vh;
+            top: 0;
+        }
+    }
+}
+
