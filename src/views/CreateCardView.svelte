@@ -14,85 +14,79 @@
         }
     }
 </script>
-
-<div class="main">
-    <section class="cardpreview">
-        <BusinessCard />
-    </section>
-    
-    <section class="form">
-        <h1>Crée ta carte de visite</h1>
-    
-        <h2>Informations</h2>
-        <form>
-            <div class="fieldRow">
-                <div id="selectTitle">
-                    <label for="cars">Title</label>
-                    <select name="title" bind:value={$cardInfo.title}>
-                        <option value="Mr">Mister</option>
-                        <option value="M">Miss</option>
-                        <option value="Dr">Doctor</option>
-                        <option value="Pr">Professor</option>
-                    </select>
+    <article class="container">
+    <div class="form-preview-card">
+        <section class="card-preview">
+            <!-- 
+            <BusinessCard />
+            -->
+        </section>
+        <section class="form">
+            <h1>Créer ta carte de visite</h1>
+            <h2>Informations</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-item">
+                    <div id="selectTitle" class="form-select">
+                        <label for="title">Title*</label>
+                        <select name="title" bind:value={$cardInfo.title}>
+                            <option value="Mr">Mister</option>
+                            <option value="M">Miss</option>
+                            <option value="Dr">Doctor</option>
+                            <option value="Pr">Professor</option>
+                        </select>
+                    </div>
+                    </div>
                 </div>
-            </div>
+                
+                <aside class="form-row">
+                    <div class="form-item">
+                        <FieldArea bind:value={$cardInfo.firstname} displayName="First Name" fieldName="firstname" forceValidation={forceValidation} requireUpperFirstChar />
+                    </div>
 
-            <div class="fieldRow">
-                <FieldArea bind:value={$cardInfo.firstname} displayName="First Name" fieldName="firstname" forceValidation={forceValidation} requireUpperFirstChar />
-                <FieldArea bind:value={$cardInfo.lastname} displayName="Last Name" fieldName="lastname" forceValidation={forceValidation} requireUpperFirstChar />
-            </div>
-    
-            <div class="fieldRow">
-                <FieldArea bind:value={$cardInfo.phoneNumber} displayName="Phone Number" fieldName="phoneNumber" forceValidation={forceValidation} />
-                <FieldArea bind:value={$cardInfo.email} displayName="Email" fieldName="email" forceValidation={forceValidation} />
-            </div>
-    
-            <div class="fieldRow">
-                <FieldArea bind:value={$cardInfo.job} displayName="Job" fieldName="job" forceValidation={forceValidation} requireUpperFirstChar />
-                <FieldArea bind:value={$cardInfo.address} displayName="Address" fieldName="address" forceValidation={forceValidation} />
-            </div>
-            
-            <div class="fieldRow">
-                <FieldArea bind:value={$cardInfo.cp} displayName="Postal Code" fieldName="cp" forceValidation={forceValidation} />
-                <FieldArea bind:value={$cardInfo.city} displayName="City" fieldName="city" forceValidation={forceValidation} requireUpperFirstChar />
-            </div>
-        </form>
-    
-        <h2>Select your template</h2>
+                    <div class="form-item">
+                        <FieldArea bind:value={$cardInfo.lastname} displayName="Last Name" fieldName="lastname" forceValidation={forceValidation} requireUpperFirstChar />
+                    </div>
+                </aside>
 
-        <button on:click={save}>Save</button>
-    </section>
-</div>
+                <aside class="form-row">
+                    <div class="form-item">
+                        <FieldArea bind:value={$cardInfo.phoneNumber} displayName="Phone Number" fieldName="phoneNumber" forceValidation={forceValidation} />
 
-<style>
-    .main {
-        display: flex;
-    }
+                    </div>
+                    <div class="form-item">
+                        <FieldArea bind:value={$cardInfo.email} displayName="Email" fieldName="email" forceValidation={forceValidation} />
+                    </div>
+                </aside>
+        
+                <aside class="form-row">
+                    <div class="form-item">
+                        <FieldArea bind:value={$cardInfo.job} displayName="Job" fieldName="job" forceValidation={forceValidation} requireUpperFirstChar />
 
-    section {
-        flex: 1;
-    }
+                    </div>
+                    <div class="form-item">
+                        <FieldArea bind:value={$cardInfo.address} displayName="Address" fieldName="address" forceValidation={forceValidation} />
+                    </div>
+                </aside>
+                
+                <aside class="form-row">
+                    <div class="form-item">
+                        <FieldArea bind:value={$cardInfo.cp} displayName="Postal Code" fieldName="cp" forceValidation={forceValidation} />
 
-    section.cardpreview {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    section.form h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        color: #7868E6;
-    }
-    
-    .fieldRow {
-        display: flex;
-        margin-bottom: 0.5rem;
-    }
-    
-    #selectTitle {
-        margin-bottom: 1rem;
-    }
-</style>
+                    </div>
+                    <div class="form-item">
+                        <FieldArea bind:value={$cardInfo.city} displayName="City" fieldName="city" forceValidation={forceValidation} requireUpperFirstChar />
+                    </div>
+                </aside>
+            </form>
+            <h2>Choisis ton template</h2>
+            <aside class="all-templates">
+                <!-- toggle class active -->
+                <div class="template-box active"></div>
+                <div class="template-box"></div>
+                <div class="template-box"></div>
+            </aside>
+            <button class="button-custom button-blue" on:click={save}>Suivant</button>
+        </section>
+    </div>
+</article>

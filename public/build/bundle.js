@@ -3619,7 +3619,7 @@ var app = (function () {
     			add_location(p2, file$3, 28, 4, 1135);
     			add_location(p3, file$3, 29, 4, 1217);
     			add_location(p4, file$3, 30, 4, 1258);
-    			attr_dev(div, "class", div_class_value = "" + (null_to_empty(/*className*/ ctx[0]) + " svelte-181z2sq"));
+    			attr_dev(div, "class", div_class_value = "" + (null_to_empty(/*className*/ ctx[0]) + " svelte-1mwf7xr"));
     			add_location(div, file$3, 25, 0, 983);
     		},
     		l: function claim(nodes) {
@@ -3661,7 +3661,7 @@ var app = (function () {
     			if (dirty & /*cardInfoPreview*/ 2 && t14_value !== (t14_value = /*cardInfoPreview*/ ctx[1].phoneNumber + "")) set_data_dev(t14, t14_value);
     			if (dirty & /*cardInfoPreview*/ 2 && t16_value !== (t16_value = /*cardInfoPreview*/ ctx[1].email + "")) set_data_dev(t16, t16_value);
 
-    			if (dirty & /*className*/ 1 && div_class_value !== (div_class_value = "" + (null_to_empty(/*className*/ ctx[0]) + " svelte-181z2sq"))) {
+    			if (dirty & /*className*/ 1 && div_class_value !== (div_class_value = "" + (null_to_empty(/*className*/ ctx[0]) + " svelte-1mwf7xr"))) {
     				attr_dev(div, "class", div_class_value);
     			}
     		},
@@ -4446,9 +4446,9 @@ var app = (function () {
     const file$1 = "src/views/CreateCardView.svelte";
 
     function create_fragment$1(ctx) {
-    	let div6;
+    	let article;
+    	let div14;
     	let section0;
-    	let businesscard;
     	let t0;
     	let section1;
     	let h1;
@@ -4456,6 +4456,7 @@ var app = (function () {
     	let h20;
     	let t4;
     	let form;
+    	let div2;
     	let div1;
     	let div0;
     	let label;
@@ -4466,41 +4467,55 @@ var app = (function () {
     	let option2;
     	let option3;
     	let t11;
-    	let div2;
+    	let aside0;
+    	let div3;
     	let fieldarea0;
     	let updating_value;
     	let t12;
+    	let div4;
     	let fieldarea1;
     	let updating_value_1;
     	let t13;
-    	let div3;
+    	let aside1;
+    	let div5;
     	let fieldarea2;
     	let updating_value_2;
     	let t14;
+    	let div6;
     	let fieldarea3;
     	let updating_value_3;
     	let t15;
-    	let div4;
+    	let aside2;
+    	let div7;
     	let fieldarea4;
     	let updating_value_4;
     	let t16;
+    	let div8;
     	let fieldarea5;
     	let updating_value_5;
     	let t17;
-    	let div5;
+    	let aside3;
+    	let div9;
     	let fieldarea6;
     	let updating_value_6;
     	let t18;
+    	let div10;
     	let fieldarea7;
     	let updating_value_7;
     	let t19;
     	let h21;
     	let t21;
+    	let aside4;
+    	let div11;
+    	let t22;
+    	let div12;
+    	let t23;
+    	let div13;
+    	let t24;
     	let button;
     	let current;
     	let mounted;
     	let dispose;
-    	businesscard = new BusinessCard({ $$inline: true });
 
     	function fieldarea0_value_binding(value) {
     		/*fieldarea0_value_binding*/ ctx[4](value);
@@ -4644,22 +4659,23 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			div6 = element("div");
+    			article = element("article");
+    			div14 = element("div");
     			section0 = element("section");
-    			create_component(businesscard.$$.fragment);
     			t0 = space();
     			section1 = element("section");
     			h1 = element("h1");
-    			h1.textContent = "Crée ta carte de visite";
+    			h1.textContent = "Créer ta carte de visite";
     			t2 = space();
     			h20 = element("h2");
     			h20.textContent = "Informations";
     			t4 = space();
     			form = element("form");
+    			div2 = element("div");
     			div1 = element("div");
     			div0 = element("div");
     			label = element("label");
-    			label.textContent = "Title";
+    			label.textContent = "Title*";
     			t6 = space();
     			select = element("select");
     			option0 = element("option");
@@ -4671,91 +4687,133 @@ var app = (function () {
     			option3 = element("option");
     			option3.textContent = "Professor";
     			t11 = space();
-    			div2 = element("div");
+    			aside0 = element("aside");
+    			div3 = element("div");
     			create_component(fieldarea0.$$.fragment);
     			t12 = space();
+    			div4 = element("div");
     			create_component(fieldarea1.$$.fragment);
     			t13 = space();
-    			div3 = element("div");
+    			aside1 = element("aside");
+    			div5 = element("div");
     			create_component(fieldarea2.$$.fragment);
     			t14 = space();
+    			div6 = element("div");
     			create_component(fieldarea3.$$.fragment);
     			t15 = space();
-    			div4 = element("div");
+    			aside2 = element("aside");
+    			div7 = element("div");
     			create_component(fieldarea4.$$.fragment);
     			t16 = space();
+    			div8 = element("div");
     			create_component(fieldarea5.$$.fragment);
     			t17 = space();
-    			div5 = element("div");
+    			aside3 = element("aside");
+    			div9 = element("div");
     			create_component(fieldarea6.$$.fragment);
     			t18 = space();
+    			div10 = element("div");
     			create_component(fieldarea7.$$.fragment);
     			t19 = space();
     			h21 = element("h2");
-    			h21.textContent = "Select your template";
+    			h21.textContent = "Choisis ton template";
     			t21 = space();
+    			aside4 = element("aside");
+    			div11 = element("div");
+    			t22 = space();
+    			div12 = element("div");
+    			t23 = space();
+    			div13 = element("div");
+    			t24 = space();
     			button = element("button");
-    			button.textContent = "Save";
-    			attr_dev(section0, "class", "cardpreview svelte-jgybp1");
-    			add_location(section0, file$1, 18, 4, 595);
-    			attr_dev(h1, "class", "svelte-jgybp1");
-    			add_location(h1, file$1, 23, 8, 705);
-    			attr_dev(h20, "class", "svelte-jgybp1");
-    			add_location(h20, file$1, 25, 8, 751);
-    			attr_dev(label, "for", "cars");
-    			add_location(label, file$1, 29, 20, 882);
+    			button.textContent = "Suivant";
+    			attr_dev(section0, "class", "card-preview");
+    			add_location(section0, file$1, 18, 8, 647);
+    			add_location(h1, file$1, 24, 12, 803);
+    			add_location(h20, file$1, 25, 12, 849);
+    			attr_dev(label, "for", "title");
+    			add_location(label, file$1, 30, 24, 1060);
     			option0.__value = "Mr";
     			option0.value = option0.__value;
-    			add_location(option0, file$1, 31, 24, 1009);
+    			add_location(option0, file$1, 32, 28, 1197);
     			option1.__value = "M";
     			option1.value = option1.__value;
-    			add_location(option1, file$1, 32, 24, 1068);
+    			add_location(option1, file$1, 33, 28, 1260);
     			option2.__value = "Dr";
     			option2.value = option2.__value;
-    			add_location(option2, file$1, 33, 24, 1124);
+    			add_location(option2, file$1, 34, 28, 1320);
     			option3.__value = "Pr";
     			option3.value = option3.__value;
-    			add_location(option3, file$1, 34, 24, 1183);
+    			add_location(option3, file$1, 35, 28, 1383);
     			attr_dev(select, "name", "title");
     			if (/*$cardInfo*/ ctx[1].title === void 0) add_render_callback(() => /*select_change_handler*/ ctx[3].call(select));
-    			add_location(select, file$1, 30, 20, 934);
+    			add_location(select, file$1, 31, 24, 1118);
     			attr_dev(div0, "id", "selectTitle");
-    			attr_dev(div0, "class", "svelte-jgybp1");
-    			add_location(div0, file$1, 28, 16, 839);
-    			attr_dev(div1, "class", "fieldRow svelte-jgybp1");
-    			add_location(div1, file$1, 27, 12, 800);
-    			attr_dev(div2, "class", "fieldRow svelte-jgybp1");
-    			add_location(div2, file$1, 39, 12, 1306);
-    			attr_dev(div3, "class", "fieldRow svelte-jgybp1");
-    			add_location(div3, file$1, 44, 12, 1694);
-    			attr_dev(div4, "class", "fieldRow svelte-jgybp1");
-    			add_location(div4, file$1, 49, 12, 2034);
-    			attr_dev(div5, "class", "fieldRow svelte-jgybp1");
-    			add_location(div5, file$1, 54, 12, 2385);
-    			add_location(form, file$1, 26, 8, 781);
-    			attr_dev(h21, "class", "svelte-jgybp1");
-    			add_location(h21, file$1, 60, 8, 2737);
-    			add_location(button, file$1, 62, 8, 2776);
-    			attr_dev(section1, "class", "form svelte-jgybp1");
-    			add_location(section1, file$1, 22, 4, 674);
-    			attr_dev(div6, "class", "main svelte-jgybp1");
-    			add_location(div6, file$1, 17, 0, 572);
+    			attr_dev(div0, "class", "form-select");
+    			add_location(div0, file$1, 29, 20, 993);
+    			attr_dev(div1, "class", "form-item");
+    			add_location(div1, file$1, 28, 20, 949);
+    			attr_dev(div2, "class", "form-row");
+    			add_location(div2, file$1, 27, 16, 906);
+    			attr_dev(div3, "class", "form-item");
+    			add_location(div3, file$1, 42, 20, 1610);
+    			attr_dev(div4, "class", "form-item");
+    			add_location(div4, file$1, 46, 20, 1856);
+    			attr_dev(aside0, "class", "form-row");
+    			add_location(aside0, file$1, 41, 16, 1565);
+    			attr_dev(div5, "class", "form-item");
+    			add_location(div5, file$1, 52, 20, 2165);
+    			attr_dev(div6, "class", "form-item");
+    			add_location(div6, file$1, 56, 20, 2395);
+    			attr_dev(aside1, "class", "form-row");
+    			add_location(aside1, file$1, 51, 16, 2120);
+    			attr_dev(div7, "class", "form-item");
+    			add_location(div7, file$1, 62, 20, 2680);
+    			attr_dev(div8, "class", "form-item");
+    			add_location(div8, file$1, 66, 20, 2907);
+    			attr_dev(aside2, "class", "form-row");
+    			add_location(aside2, file$1, 61, 16, 2635);
+    			attr_dev(div9, "class", "form-item");
+    			add_location(div9, file$1, 72, 20, 3206);
+    			attr_dev(div10, "class", "form-item");
+    			add_location(div10, file$1, 76, 20, 3417);
+    			attr_dev(aside3, "class", "form-row");
+    			add_location(aside3, file$1, 71, 16, 3161);
+    			add_location(form, file$1, 26, 12, 883);
+    			add_location(h21, file$1, 81, 12, 3683);
+    			attr_dev(div11, "class", "template-box active");
+    			add_location(div11, file$1, 84, 16, 3816);
+    			attr_dev(div12, "class", "template-box");
+    			add_location(div12, file$1, 85, 16, 3872);
+    			attr_dev(div13, "class", "template-box");
+    			add_location(div13, file$1, 86, 16, 3921);
+    			attr_dev(aside4, "class", "all-templates");
+    			add_location(aside4, file$1, 82, 12, 3725);
+    			attr_dev(button, "class", "button-custom button-blue");
+    			add_location(button, file$1, 88, 12, 3987);
+    			attr_dev(section1, "class", "form");
+    			add_location(section1, file$1, 23, 8, 768);
+    			attr_dev(div14, "class", "form-preview-card");
+    			add_location(div14, file$1, 17, 4, 607);
+    			attr_dev(article, "class", "container");
+    			add_location(article, file$1, 16, 4, 575);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
-    			insert_dev(target, div6, anchor);
-    			append_dev(div6, section0);
-    			mount_component(businesscard, section0, null);
-    			append_dev(div6, t0);
-    			append_dev(div6, section1);
+    			insert_dev(target, article, anchor);
+    			append_dev(article, div14);
+    			append_dev(div14, section0);
+    			append_dev(div14, t0);
+    			append_dev(div14, section1);
     			append_dev(section1, h1);
     			append_dev(section1, t2);
     			append_dev(section1, h20);
     			append_dev(section1, t4);
     			append_dev(section1, form);
-    			append_dev(form, div1);
+    			append_dev(form, div2);
+    			append_dev(div2, div1);
     			append_dev(div1, div0);
     			append_dev(div0, label);
     			append_dev(div0, t6);
@@ -4766,28 +4824,43 @@ var app = (function () {
     			append_dev(select, option3);
     			select_option(select, /*$cardInfo*/ ctx[1].title);
     			append_dev(form, t11);
-    			append_dev(form, div2);
-    			mount_component(fieldarea0, div2, null);
-    			append_dev(div2, t12);
-    			mount_component(fieldarea1, div2, null);
+    			append_dev(form, aside0);
+    			append_dev(aside0, div3);
+    			mount_component(fieldarea0, div3, null);
+    			append_dev(aside0, t12);
+    			append_dev(aside0, div4);
+    			mount_component(fieldarea1, div4, null);
     			append_dev(form, t13);
-    			append_dev(form, div3);
-    			mount_component(fieldarea2, div3, null);
-    			append_dev(div3, t14);
-    			mount_component(fieldarea3, div3, null);
+    			append_dev(form, aside1);
+    			append_dev(aside1, div5);
+    			mount_component(fieldarea2, div5, null);
+    			append_dev(aside1, t14);
+    			append_dev(aside1, div6);
+    			mount_component(fieldarea3, div6, null);
     			append_dev(form, t15);
-    			append_dev(form, div4);
-    			mount_component(fieldarea4, div4, null);
-    			append_dev(div4, t16);
-    			mount_component(fieldarea5, div4, null);
+    			append_dev(form, aside2);
+    			append_dev(aside2, div7);
+    			mount_component(fieldarea4, div7, null);
+    			append_dev(aside2, t16);
+    			append_dev(aside2, div8);
+    			mount_component(fieldarea5, div8, null);
     			append_dev(form, t17);
-    			append_dev(form, div5);
-    			mount_component(fieldarea6, div5, null);
-    			append_dev(div5, t18);
-    			mount_component(fieldarea7, div5, null);
+    			append_dev(form, aside3);
+    			append_dev(aside3, div9);
+    			mount_component(fieldarea6, div9, null);
+    			append_dev(aside3, t18);
+    			append_dev(aside3, div10);
+    			mount_component(fieldarea7, div10, null);
     			append_dev(section1, t19);
     			append_dev(section1, h21);
     			append_dev(section1, t21);
+    			append_dev(section1, aside4);
+    			append_dev(aside4, div11);
+    			append_dev(aside4, t22);
+    			append_dev(aside4, div12);
+    			append_dev(aside4, t23);
+    			append_dev(aside4, div13);
+    			append_dev(section1, t24);
     			append_dev(section1, button);
     			current = true;
 
@@ -4888,7 +4961,6 @@ var app = (function () {
     		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(businesscard.$$.fragment, local);
     			transition_in(fieldarea0.$$.fragment, local);
     			transition_in(fieldarea1.$$.fragment, local);
     			transition_in(fieldarea2.$$.fragment, local);
@@ -4900,7 +4972,6 @@ var app = (function () {
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(businesscard.$$.fragment, local);
     			transition_out(fieldarea0.$$.fragment, local);
     			transition_out(fieldarea1.$$.fragment, local);
     			transition_out(fieldarea2.$$.fragment, local);
@@ -4912,8 +4983,7 @@ var app = (function () {
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			if (detaching) detach_dev(div6);
-    			destroy_component(businesscard);
+    			if (detaching) detach_dev(article);
     			destroy_component(fieldarea0);
     			destroy_component(fieldarea1);
     			destroy_component(fieldarea2);
@@ -5076,45 +5146,6 @@ var app = (function () {
 
     // (9:2) <Route path="/">
     function create_default_slot_3(ctx) {
-    	let homeview;
-    	let current;
-    	homeview = new HomeView({ $$inline: true });
-
-    	const block = {
-    		c: function create() {
-    			create_component(homeview.$$.fragment);
-    		},
-    		m: function mount(target, anchor) {
-    			mount_component(homeview, target, anchor);
-    			current = true;
-    		},
-    		i: function intro(local) {
-    			if (current) return;
-    			transition_in(homeview.$$.fragment, local);
-    			current = true;
-    		},
-    		o: function outro(local) {
-    			transition_out(homeview.$$.fragment, local);
-    			current = false;
-    		},
-    		d: function destroy(detaching) {
-    			destroy_component(homeview, detaching);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_3.name,
-    		type: "slot",
-    		source: "(9:2) <Route path=\\\"/\\\">",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (13:2) <Route path="create">
-    function create_default_slot_2(ctx) {
     	let createcardview;
     	let current;
     	createcardview = new CreateCardView({ $$inline: true });
@@ -5138,6 +5169,45 @@ var app = (function () {
     		},
     		d: function destroy(detaching) {
     			destroy_component(createcardview, detaching);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot_3.name,
+    		type: "slot",
+    		source: "(9:2) <Route path=\\\"/\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
+    // (13:2) <Route path="create">
+    function create_default_slot_2(ctx) {
+    	let homeview;
+    	let current;
+    	homeview = new HomeView({ $$inline: true });
+
+    	const block = {
+    		c: function create() {
+    			create_component(homeview.$$.fragment);
+    		},
+    		m: function mount(target, anchor) {
+    			mount_component(homeview, target, anchor);
+    			current = true;
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(homeview.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(homeview.$$.fragment, local);
+    			current = false;
+    		},
+    		d: function destroy(detaching) {
+    			destroy_component(homeview, detaching);
     		}
     	};
 

@@ -33,6 +33,6 @@
 
 <style>
     .businessCard {
-        background-color: #B8B5FF;
+        background-color: red;
     }
 </style>

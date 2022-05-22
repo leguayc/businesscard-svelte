@@ -7,11 +7,11 @@
 <Router>
 	<main>
 		<Route path="/">
-			<HomeView />
+			<CreateCardView />
 		</Route>
   
 		<Route path="create">
-			<CreateCardView />
+			<HomeView />
 		</Route>
   
 		<Route path="template/:id" let:params>

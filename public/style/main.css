@@ -59,6 +59,7 @@ table {
 */
 body {
   overflow: hidden;
+  background-color: #EDEEF7;
 }
 
 .container {
@@ -70,11 +71,15 @@ body {
 /*
 ** Text 
 */
-.regular, .home .text-home p {
+.regular, .home .text-home p, .form-preview-card .form .form-row .form-select select, .form-preview-card .form .form-row .form-item .error-wrapper small, .form-preview-card .form .form-row .form-item input {
   font-family: 'Satoshi-Regular';
 }
 
-.bold, .button-custom, .home .text-home h1 {
+.medium, .form-preview-card .form .form-row .form-item label {
+  font-family: 'Satoshi-Medium';
+}
+
+.bold, .button-custom, .home .text-home h1, .form-preview-card .form > h1, .form-preview-card .form > h2 {
   font-family: 'Satoshi-Bold';
 }
 
@@ -86,6 +91,7 @@ body {
   border-radius: 6px;
   font-size: 15px;
   color: white;
+  cursor: pointer;
 }
 
 .button-blue {
@@ -99,6 +105,10 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .button-blue::after {
@@ -120,7 +130,7 @@ body {
 }
 
 /*
-** Home 
+** Home view
 */
 .home {
   display: -webkit-box;
@@ -228,5 +238,151 @@ body {
   left: 0;
   height: 100vh;
   top: 0;
+}
+
+/*
+** Create card view
+*/
+.form-preview-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form-preview-card .card-preview {
+  width: 45%;
+}
+
+.form-preview-card .form {
+  width: 45%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form-preview-card .form > h1 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #292929;
+}
+
+.form-preview-card .form > h2 {
+  font-size: 25px;
+  margin-bottom: 30px;
+  color: #002F94;
+}
+
+.form-preview-card .form .form-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.form-preview-card .form .form-row .form-select {
+  margin-bottom: 33px;
+}
+
+.form-preview-card .form .form-row .form-select select {
+  padding: 13px 8px;
+  border: none;
+  background-color: white;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 95%;
+  color: #002F94;
+  margin-top: 14px;
+}
+
+.form-preview-card .form .form-row .form-item {
+  width: 40%;
+}
+
+.form-preview-card .form .form-row .form-item .error-wrapper {
+  height: 33px;
+}
+
+.form-preview-card .form .form-row .form-item .error-wrapper small {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form-preview-card .form .form-row .form-item label {
+  margin-bottom: 14px;
+  color: #292929;
+}
+
+.form-preview-card .form .form-row .form-item input {
+  padding: 13px 8px;
+  border: none;
+  background-color: white;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 95%;
+  color: #002F94;
+}
+
+.form-preview-card .form .form-row .form-item input::-webkit-input-placeholder {
+  color: grey;
+}
+
+.form-preview-card .form .form-row .form-item input:-ms-input-placeholder {
+  color: grey;
+}
+
+.form-preview-card .form .form-row .form-item input::-ms-input-placeholder {
+  color: grey;
+}
+
+.form-preview-card .form .form-row .form-item input::placeholder {
+  color: grey;
+}
+
+.all-templates {
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.all-templates .template-box {
+  width: 205px;
+  height: 122px;
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
+  cursor: pointer;
+}
+
+.all-templates .template-box.active::after {
+  content: url("../img/active.svg");
+  position: absolute;
+  z-index: 999;
+  right: -7%;
+  top: -8%;
 }
 /*# sourceMappingURL=main.css.map */

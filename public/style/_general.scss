@@ -3,7 +3,8 @@
 */
 
 body{
-       overflow: hidden;
+    overflow: hidden;
+    background-color: $white;
 }
 .container{
    max-width: 85%;
@@ -17,6 +18,9 @@ body{
 
 .regular{
   font-family: 'Satoshi-Regular';
+}
+.medium{
+  font-family: 'Satoshi-Medium';
 }
 
 .bold{
@@ -35,7 +39,7 @@ body{
     @extend .bold;
     font-size: 15px;
         color: white;
-
+    cursor: pointer;
 }
 
 .button-blue{
@@ -43,6 +47,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    border:none;
+    width: fit-content;
     &::after{
         content: url('../img/arrow.svg');
         display: flex;
@@ -58,7 +64,7 @@ body{
 
 
 /*
-** Home 
+** Home view
 */
 
 .home{
@@ -121,6 +127,115 @@ body{
             left: 0;
             height: 100vh;
             top: 0;
+        }
+    }
+}
+
+
+
+/*
+** Create card view
+*/
+
+.form-preview-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .card-preview{
+        width: 45%;
+    }
+    .form{
+        width: 45%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        > h1{
+            font-size: 30px;
+            @extend .bold;
+            margin-bottom: 30px;
+            color: $black;
+        }
+         > h2{
+            font-size: 25px;
+            @extend .bold;
+            margin-bottom: 30px;
+            color: $blue;
+         }
+        .form-row{
+            display: flex;
+            justify-content: space-between;
+            .form-select{
+                margin-bottom: 33px;
+                
+                select{
+                    padding: 13px 8px;
+                    border: none;
+                    background-color: white;
+                    border-radius: 6px;
+                    font-size: 16px;
+                    width: 95%;
+                    @extend .regular;
+                    color: $blue;
+                    margin-top: 14px;
+                
+                }
+            }
+            .form-item{
+                width: 40%;
+                .error-wrapper{
+                    height: 33px;
+                    small{
+                        display: flex;
+                        align-items: center;
+                        @extend .regular
+                    }
+                }
+                label{
+                    margin-bottom: 14px;
+                    color: $black;
+                    @extend .medium;
+                }
+                input{
+                    padding: 13px 8px;
+                    border: none;
+                    background-color: white;
+                    border-radius: 6px;
+                    font-size: 16px;
+                    width: 95%;
+                    @extend .regular;
+                    color: $blue;
+                        &::placeholder{
+                            color: grey;
+                        }
+                }
+            }
+        }
+
+    }
+}
+
+.all-templates{
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    .template-box{
+        width: 205px;
+        height: 122px;
+        background-color: white;
+        border-radius: 6px;
+        position: relative;
+        cursor: pointer;
+        &.active{
+            &::after{
+                content: url('../img/active.svg');
+                position: absolute;
+                z-index: 999;
+                right: -7%;
+                top: -8%;
+            }
         }
     }
 }
