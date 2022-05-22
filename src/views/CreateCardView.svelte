@@ -25,6 +25,14 @@
         templates[id].className = 'template-box active';
         $cardInfo.templateId = id;
     }
+
+    let setLogo = (e) => {
+        let imgFiles = e.target.files;
+
+        if (imgFiles && imgFiles[0]) {
+            $cardInfo.logo = URL.createObjectURL(imgFiles[0]); // set src to blob url
+        }
+    }
 </script>
     <article class="container">
     <div class="form-preview-card">
@@ -37,15 +45,21 @@
             <form>
                 <div class="form-row">
                     <div class="form-item">
-                    <div id="selectTitle" class="form-select">
-                        <label for="title">Title*</label>
-                        <select name="title" bind:value={$cardInfo.title}>
-                            <option value="Mr">Mister</option>
-                            <option value="M">Miss</option>
-                            <option value="Dr">Doctor</option>
-                            <option value="Pr">Professor</option>
-                        </select>
+                        <div id="selectTitle" class="form-select">
+                            <label for="title">Title*</label>
+                            <select name="title" bind:value={$cardInfo.title}>
+                                <option value="Mr">Mister</option>
+                                <option value="M">Miss</option>
+                                <option value="Dr">Doctor</option>
+                                <option value="Pr">Professor</option>
+                            </select>
+                        </div>
                     </div>
+                    <div class="form-item">
+                        <div class="fieldArea">
+                            <label for="logo">Logo</label>
+                            <input type="file" name="logo" accept="image/jpeg, image/png, image/jpg" on:change={setLogo} />
+                        </div>
                     </div>
                 </div>
                 

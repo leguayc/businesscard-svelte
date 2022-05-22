@@ -10,5 +10,7 @@ export const cardInfo = writable({
     address : "",
     cp : "",
     city : "",
-    templateId : 0
+    templateId : 0,
+    cardInfo : "",
+    logo : ""
 });
