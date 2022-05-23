@@ -217,19 +217,19 @@ body{
 
 .all-templates{
     margin-bottom: 30px;
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
     width:100%;
     .template-box{
-        width: 205px;
-        height: 122px;
+        width: 305px;
+        height: 222px;
         background-color: white;
         border-radius: 6px;
         position: relative;
         cursor: pointer;
         &.active{
             &::after{
-                content: url('../img/active.svg');
+                // content: url('../img/active.svg');
                 position: absolute;
                 z-index: 999;
                 right: -7%;
@@ -237,5 +237,52 @@ body{
             }
         }
     }
+}
+
+/**
+ * Slider card view 
+ */
+.template-box {
+    position: absolute;
+    transform-origin: 100% 100%;
+}
+  
+.containerCard {
+    width: 400px;
+    height: 267px;
+    margin: 16px;
+}
+  
+.active{
+    background-color: red;
+}
+  
+.button-next {
+    font-size: 25px;
+    padding-top: 5px;
+    background: white;
+    margin-top: 4.5em;
+    height: 40px;
+    border-radius: 50px;
+    outline: none;
+    border: 0px solid black;
+    cursor: pointer;
+    color: black;
+}
+  
+.template-box {
+    z-index: 0;
+}
+  
+.template-2 {
+    z-index: 1;
+}
+  
+.template-3 {
+    z-index: 1;
+}
+  
+.template-1 {
+    z-index: 2;
 }
 
