@@ -91,6 +91,9 @@ body {
   font-size: 15px;
   color: white;
   cursor: pointer;
+  height: 30px;
+  margin-left: 20%;
+  margin-top: 3.5em;
 }
 
 .button-blue {
@@ -359,12 +362,13 @@ body {
 
 .all-templates {
   margin-bottom: 30px;
+  margin-top: -5%;
   width: 100%;
 }
 
 .all-templates .template-box {
-  width: 305px;
-  height: 222px;
+  width: 205px;
+  height: 122px;
   background-color: white;
   border-radius: 6px;
   position: relative;
@@ -401,7 +405,8 @@ body {
   font-size: 25px;
   padding-top: 5px;
   background: white;
-  margin-top: 4.5em;
+  margin-top: 2em;
+  margin-left: -2em;
   height: 40px;
   border-radius: 50px;
   outline: none;

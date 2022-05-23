@@ -1,4 +1,5 @@
 <script>
+
     import * as BCH from '../helpers/BusinessCardHelper.js';
     import BusinessCard from '../components/BusinessCard.svelte';
     import FieldArea from '../components/FieldArea.svelte';
@@ -71,7 +72,17 @@
             lastCard = nextCard - 1;
         }
     }
+
+    let setLogo = (e) => {
+        let imgFiles = e.target.files;
+
+        if (imgFiles && imgFiles[0]) {
+            $cardInfo.logo = URL.createObjectURL(imgFiles[0]); // set src to blob url
+        }
+    }
+    
 </script>
+
 
     <article class="container">
     <div class="form-preview-card">
@@ -84,15 +95,21 @@
             <form>
                 <div class="form-row">
                     <div class="form-item">
-                    <div id="selectTitle" class="form-select">
-                        <label for="title">Title*</label>
-                        <select name="title" bind:value={$cardInfo.title}>
-                            <option value="Mr">Mister</option>
-                            <option value="M">Miss</option>
-                            <option value="Dr">Doctor</option>
-                            <option value="Pr">Professor</option>
-                        </select>
+                        <div id="selectTitle" class="form-select">
+                            <label for="title">Title*</label>
+                            <select name="title" bind:value={$cardInfo.title}>
+                                <option value="Mr">Mister</option>
+                                <option value="M">Miss</option>
+                                <option value="Dr">Doctor</option>
+                                <option value="Pr">Professor</option>
+                            </select>
+                        </div>
                     </div>
+                    <div class="form-item">
+                        <div class="fieldArea">
+                            <label for="logo">Logo</label>
+                            <input type="file" name="logo" accept="image/jpeg, image/png, image/jpg" on:change={setLogo} />
+                        </div>
                     </div>
                 </div>
                 
@@ -152,8 +169,8 @@
                         <polyline points="9 6 15 12 9 18" />
                     </svg>
                 </button>
+                <button class="button-custom button-blue" on:click={save}>Suivant</button>
             </aside>
-            <button class="button-custom button-blue" on:click={save}>Suivant</button>
         </section>
     </div>
 </article>

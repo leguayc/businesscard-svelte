@@ -16,6 +16,8 @@ export function getPlaceHolderOf(fieldName) {
             return "john.doe@gmail.com";
         case "job" :
             return "Developper";
+        case "logo" :
+            return "./img/uber.svg";
     }
 }
 
@@ -37,6 +39,8 @@ export function validateField(value, fieldName) {
             return (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value));
         case "job" :
             return (value && value.length > 2 && value.length < 50);
+        case "logo" :
+            return (value && true); // Force bool
     }
 }
 
@@ -71,6 +75,7 @@ export function getPlaceHolderInfo(cardInfo) {
         title : cardInfo.title,
         address : initValue(cardInfo.address, "address"),
         cp : initValue(cardInfo.cp, "cp"),
-        city : initValue(cardInfo.city, "city")
+        city : initValue(cardInfo.city, "city"),
+        logo : initValue(cardInfo.logo, "logo"),
     };
 }
