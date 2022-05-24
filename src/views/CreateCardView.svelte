@@ -1,18 +1,27 @@
 <script>
-
     import * as BCH from '../helpers/BusinessCardHelper.js';
     import BusinessCard from '../components/BusinessCard.svelte';
     import FieldArea from '../components/FieldArea.svelte';
 	import { cardInfo } from '../stores/cardInfo.js';
+	import { card } from '../stores/card.js';
     import { gsap, Power1 } from "gsap";
+    import { jsPDF } from "jspdf";
+    import html2canvas from "html2canvas";
 
     let forceValidation = false;
 
     let save = () => {
         forceValidation = true;
-        if (BCH.validateAll(firstname, lastname, phoneNumber, email, job, address, cp, city)) {
-            // TODO : Save to pdf, navigate to other view, ...
-            console.log("Validation success !");
+        if (BCH.validateAll($cardInfo)) {
+            html2canvas($card, {scale: 3}).then(function(canvas) {
+                let img = new Image();
+                img.src = canvas.toDataURL("image/jpg");
+                img.onload = function () {
+                    let pdf = new jsPDF('landscape', 'px', [558, 310]);
+                    pdf.addImage(img, 0, 0, pdf.internal.pageSize.width, pdf.internal.pageSize.height);
+                    pdf.save('BusinessCard.pdf');
+                };
+            });
         }
     }
 

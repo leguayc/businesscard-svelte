@@ -44,15 +44,15 @@ export function validateField(value, fieldName) {
     }
 }
 
-export function validateAll(firstname, lastname, address, cp, city, phoneNumber, email, job) {
-    if (!validateField(firstname, "firstname")) return false;
-    if (!validateField(lastname, "lastname")) return false;
-    if (!validateField(address, "address")) return false;
-    if (!validateField(cp, "cp")) return false;
-    if (!validateField(city, "city")) return false;
-    if (!validateField(phoneNumber, "phoneNumber")) return false;
-    if (!validateField(email, "email")) return false;
-    if (!validateField(job, "job")) return false;
+export function validateAll(cardInfo) {
+    if (!validateField(cardInfo.firstname, "firstname")) return false;
+    if (!validateField(cardInfo.lastname, "lastname")) return false;
+    if (!validateField(cardInfo.address, "address")) return false;
+    if (!validateField(cardInfo.cp, "cp")) return false;
+    if (!validateField(cardInfo.city, "city")) return false;
+    if (!validateField(cardInfo.phoneNumber, "phoneNumber")) return false;
+    if (!validateField(cardInfo.email, "email")) return false;
+    if (!validateField(cardInfo.job, "job")) return false;
 
     return true;
 }
