@@ -1,6 +1,7 @@
 <script>
     import { getPlaceHolderInfo } from '../helpers/BusinessCardHelper.js';
 	import { cardInfo } from '../stores/cardInfo.js';
+	import { card } from '../stores/card.js';
     import BCTemplate0 from './bc-templates/BCTemplate0.svelte';
     import BCTemplate1 from './bc-templates/BCTemplate1.svelte';
     import BCTemplate2 from './bc-templates/BCTemplate2.svelte';
@@ -20,6 +21,6 @@
 </script>
 
 
-<div class="business-card">
+<div class="business-card" bind:this={$card}>
     <svelte:component this={templates[$cardInfo.templateId]} cardInfo={cardInfoPreview} />
 </div>
