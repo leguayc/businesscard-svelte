@@ -34,8 +34,8 @@
 	];
 
     let setTemplateActive = (id) => {
-        // templates[$cardInfo.templateId].className = 'template-box';
-        // templates[id].className = 'template-box  active';
+        templates[$cardInfo.templateId].className = 'template-box';
+        templates[id].className = 'template-box  active';
         $cardInfo.templateId = id;
     }
 
@@ -169,15 +169,14 @@
                 <!-- toggle class active -->
                 <div class="containerCard">
                     {#each templates as template}
-                        <!-- <div class={template.className} on:click={() => setTemplateActive(template.id)}></div> -->
-                        <div class={template.className}></div>
+                        <div class={template.className} on:click={() => setTemplateActive(template.id)}></div>
                     {/each}
                 </div>
                 
                 <div class="buttons-create-card">
                 
                 <button class="button-custom button-blue" on:click={save}>Suivant</button>
-                <Link class="button-custom button-black" to="create">Exemples</Link> 
+                <Link class="button-custom button-black" to="slider">Exemples</Link> 
                 </div>
              
 
