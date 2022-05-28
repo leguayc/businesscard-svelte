@@ -6,7 +6,8 @@
         "../../public/style/_variable.scss",
         "../../public/style/_reset.scss",
         "../../public/style/_general.scss",
-        "../../public/style/_cardTemplate.scss"
+        "../../public/style/_cardTemplate.scss",
+        "../../public/style/_slider.scss"
     ],
     "names": [],
     "file": "main.css"
