@@ -362,14 +362,8 @@ body {
 
 .all-templates {
   margin-bottom: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  /* display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; */
-  width: 100%;
   margin-top: -5%;
+  width: 100%;
 }
 
 .all-templates .template-box {
@@ -377,15 +371,84 @@ body {
   height: 122px;
   background-color: white;
   border-radius: 6px;
+  position: relative;
   cursor: pointer;
 }
 
 .all-templates .template-box.active::after {
-  /* content: url("../img/active.svg"); */
+  content: url("../img/active.svg");
   position: absolute;
   z-index: 999;
   right: -7%;
   top: -8%;
+}
+
+/**
+ * Slider card view 
+ */
+.template-box {
+  position: absolute;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+
+.containerCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 40px;
+}
+
+.active {
+  background-color: red;
+}
+
+.button-next {
+  font-size: 25px;
+  padding-top: 5px;
+  background: white;
+  margin-top: 2em;
+  margin-left: -2em;
+  height: 40px;
+  border-radius: 50px;
+  outline: none;
+  border: 0px solid black;
+  cursor: pointer;
+  color: black;
+}
+
+.template-box {
+  z-index: 0;
+}
+
+.template-2 {
+  z-index: 1;
+}
+
+.template-3 {
+  z-index: 1;
+}
+
+.template-1 {
+  z-index: 2;
+}
+
+.buttons-create-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.buttons-create-card .button-custom {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
 }
 
 .business-card {
@@ -487,53 +550,5 @@ body {
 .template-card-0 .infos-card .header-card p:first-child {
   font-size: 20px !important;
   margin-bottom: 5px;
-}
-
-/**
- * Slider card view
- */
-.template-box {
-  position: absolute;
-  transform-origin: 100% 100%;
-}
-
-.containerCard {
-  width: 300px;
-  height: 167px;
-  margin: 16px;
-}
-
-.active{
-  background-color: red;
-}
-
-.button-next {
-  font-size: 25px;
-  padding-top: 5px;
-  background: white;
-  margin-top: 2em;
-  margin-left: -2em;
-  height: 40px;
-  border-radius: 50px;
-  outline: none;
-  border: 0px solid black;
-  cursor: pointer;
-  color: black;
-}
-
-.template-box {
-  z-index: 0;
-}
-
-.template-2 {
-  z-index: 1;
-}
-
-.template-3 {
-  z-index: 1;
-}
-
-.template-1 {
-  z-index: 2;
 }
 /*# sourceMappingURL=main.css.map */

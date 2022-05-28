@@ -8,9 +8,7 @@
 <Router>
 	<main>
 		<Route path="/">
-			<!-- <CreateCardView /> -->
-			<SliderView />
-
+			<CreateCardView />
 		</Route>
   
 		<Route path="create">

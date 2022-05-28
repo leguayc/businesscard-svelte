@@ -1,26 +1,61 @@
 <script>
 import { gsap } from "gsap";
+import gsapCore from "gsap/gsap-core";
 
-let count = 0;
-const elements = ['.box1', '.box2', '.box3', '.box4']
-gsap.config({ nullTargetWarn: false, trialWarn: false, });
+let count = 1
 
+const nextButton  = document.getElementById('nextImage')
 
-// Prev button
-function slidePrev() {
-    gsap.fromTo(elements[count], { xPercent: 0, zIndex: 0 }, { delay: 0.2, duration: 1.2, xPercent: 0, zIndex: -10 });
-    count = count > elements.length - 1 ? count : --count;
-    gsap.fromTo(elements[count], { xPercent: 100, zIndex: -10 }, { duration: 1.2, xPercent: 0, zIndex: 10 });
+const prevButton = document.getElementById('prevButton')
+
+const sliderContainer = document.querySelector('.box-container')
+
+const NbItemSlider =  document.querySelectorAll('.box').length
+
+function nextSlide(){
+    if (count == 3){
+    gsap.to(".box-container", {
+        duration : 0.3,
+        x :  0
+    })
+    count = 1
+    console.log(count);
+}else{
+   
+    gsap.to(".box-container", {
+        duration : 0.3,
+        x :  -100* count+ "vw"
+    })
+    count++
+    console.log(count);
+}
 }
 
-// Next button
-function slideNext() {
-    gsap.fromTo(elements[count], { xPercent: 0, zIndex: 0 }, { delay: 0.2, duration: 1.2, xPercent: 0, zIndex: -10 });
-    count = count < elements.length - 1 ? ++count : 0;
-    gsap.fromTo(elements[count], { xPercent: 100, zIndex: -10 }, { duration: 1.2, xPercent: 0, zIndex: 10 });
+function prevSlide(){
+    if (count == 1){
+    count = 3,
+    gsap.to(".box-container", {
+        duration : 0.3,
+        x :  -100* (count-1)+ "vw"
+    })
     console.log(count)
-}
+    }else if (count==3){
+    count = count-2
+    gsap.to(".box-container", {
+        duration : 0.3,
+        x :  -100* (count)+ "vw"
+    })
+    count++
+    console.log(count)
 
+    }else{
+        gsap.to(".box-container", {
+        duration : 0.3,
+        x :  0
+    })
+    count = 1
+    }
+}
 
 </script>
 
@@ -29,17 +64,16 @@ function slideNext() {
             <div class="box box1"></div>
             <div class="box box2"></div>
             <div class="box box3"></div>
-            <div class="box box4"></div>
         </div>
         
         <div class="controls">
-            <button id="prevButton" on:click={() => slidePrev()}>
+            <button id="prevButton" on:click={prevSlide}>
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-left" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <polyline points="15 6 9 12 15 18" />
                 </svg>
             </button>
-            <button class="nextImage" id="nextButton" on:click={() => slideNext()}>
+            <button class="nextImage" id="nextButton" on:click={nextSlide}>
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-right" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <polyline points="9 6 15 12 9 18" />
@@ -69,37 +103,33 @@ function slideNext() {
     cursor: pointer;
   
 }
-.box-container {
-    position: relative;
-    overflow: hidden;
-    /*border: .2rem solid black;*/
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    /* Préserve le ratio de l'image */
-    min-width: 100%;
-    min-height: 100%;
-}
-.box {
-    position: absolute;
-    width: 100%; 
-    height: 100%;
-    display: grid;
-    place-items: center;
-    /* z-index: 0; */
+
+.box{
+    width: 100vw;
+    height: 100vh;
 }
 
-.box1 {
-    background-color: rgb(255, 255, 255);
-    left: 0%;
+.box-container{
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
-.box2 {
-    background-color: rgb(0, 68, 255);
+
+
+.box1{
+    background-color: red;
 }
-.box3 {
-    background-color: rgb(255, 0, 0);
+.box2{
+    background-color: green;
 }
-.box4 {
-    background-color: rgb(21, 255, 0);
+.box3{
+    background-color: blue;
 }
+
+
+
 </style>

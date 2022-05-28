@@ -233,7 +233,7 @@ body{
         cursor: pointer;
         &.active{
             &::after{
-                // content: url('../img/active.svg');
+                content: url('../img/active.svg');
                 position: absolute;
                 z-index: 999;
                 right: -7%;
@@ -252,9 +252,9 @@ body{
 }
   
 .containerCard {
-    width: 400px;
-    height: 267px;
-    margin: 16px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
 }
   
 .active{
@@ -291,3 +291,11 @@ body{
     z-index: 2;
 }
 
+.buttons-create-card{
+    display: flex;
+    height: min-content;
+
+    .button-custom{
+        height: min-content;
+    }
+}
