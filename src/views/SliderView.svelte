@@ -1,6 +1,7 @@
 <script>
 import { gsap } from "gsap";
 import gsapCore from "gsap/gsap-core";
+import { Link } from "svelte-navigator";
 
 let count = 1
 
@@ -15,16 +16,19 @@ const NbItemSlider =  document.querySelectorAll('.box').length
 function nextSlide(){
     if (count == 3){
     gsap.to(".box-container", {
-        duration : 0.3,
-        x :  0
+        duration : 1,
+        x :  0,
+        ease:"expo.out"
     })
     count = 1
     console.log(count);
 }else{
    
     gsap.to(".box-container", {
-        duration : 0.3,
-        x :  -100* count+ "vw"
+        duration : 1,
+        x :  -100* count+ "vw",
+                ease:"expo.out"
+
     })
     count++
     console.log(count);
@@ -35,23 +39,29 @@ function prevSlide(){
     if (count == 1){
     count = 3,
     gsap.to(".box-container", {
-        duration : 0.3,
-        x :  -100* (count-1)+ "vw"
+        duration : 1,
+        x :  -100* (count-1)+ "vw",
+                ease:"expo.out"
+
     })
     console.log(count)
     }else if (count==3){
     count = count-2
     gsap.to(".box-container", {
-        duration : 0.3,
-        x :  -100* (count)+ "vw"
+        duration : 1,
+        x :  -100* (count)+ "vw",
+                ease:"expo.out"
+
     })
     count++
     console.log(count)
 
     }else{
         gsap.to(".box-container", {
-        duration : 0.3,
-        x :  0
+        duration : 1,
+        x :  0,
+                ease:"expo.out"
+
     })
     count = 1
     }
@@ -61,6 +71,9 @@ function prevSlide(){
 
 <article class="slider slides-container">
 	<div class="box-container slides-innner">
+        <div class="return">
+            <Link class="link-return" to="create">Back to edit</Link>
+        </div>
         <div class="box box1"></div>
         <div class="box box2"></div>
         <div class="box box3"></div>

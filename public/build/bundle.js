@@ -2358,7 +2358,7 @@ var app = (function () {
     	router = new Router$1({
     			props: {
     				primary: /*primary*/ ctx[1],
-    				$$slots: { default: [create_default_slot$3] },
+    				$$slots: { default: [create_default_slot$4] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -2571,7 +2571,7 @@ var app = (function () {
     }
 
     // (98:1) <Router {primary}>
-    function create_default_slot$3(ctx) {
+    function create_default_slot$4(ctx) {
     	let current_block_type_index;
     	let if_block;
     	let if_block_anchor;
@@ -2641,7 +2641,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$3.name,
+    		id: create_default_slot$4.name,
     		type: "slot",
     		source: "(98:1) <Router {primary}>",
     		ctx
@@ -3302,7 +3302,7 @@ var app = (function () {
     }
 
     // (18:5) <Link class="button-custom button-black" to="slider">
-    function create_default_slot$2(ctx) {
+    function create_default_slot$3(ctx) {
     	let t;
 
     	const block = {
@@ -3319,7 +3319,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot$2.name,
+    		id: create_default_slot$3.name,
     		type: "slot",
     		source: "(18:5) <Link class=\\\"button-custom button-black\\\" to=\\\"slider\\\">",
     		ctx
@@ -3360,7 +3360,7 @@ var app = (function () {
     			props: {
     				class: "button-custom button-black",
     				to: "slider",
-    				$$slots: { default: [create_default_slot$2] },
+    				$$slots: { default: [create_default_slot$3] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -9010,62 +9010,108 @@ var app = (function () {
     const { console: console_1$3 } = globals;
     const file$7 = "src/views/SliderView.svelte";
 
+    // (75:12) <Link class="link-return" to="create">
+    function create_default_slot$2(ctx) {
+    	let t;
+
+    	const block = {
+    		c: function create() {
+    			t = text("Back to edit");
+    		},
+    		m: function mount(target, anchor) {
+    			insert_dev(target, t, anchor);
+    		},
+    		d: function destroy(detaching) {
+    			if (detaching) detach_dev(t);
+    		}
+    	};
+
+    	dispatch_dev("SvelteRegisterBlock", {
+    		block,
+    		id: create_default_slot$2.name,
+    		type: "slot",
+    		source: "(75:12) <Link class=\\\"link-return\\\" to=\\\"create\\\">",
+    		ctx
+    	});
+
+    	return block;
+    }
+
     function create_fragment$7(ctx) {
     	let article;
-    	let div3;
+    	let div4;
     	let div0;
+    	let link;
     	let t0;
     	let div1;
     	let t1;
     	let div2;
     	let t2;
-    	let div4;
+    	let div3;
+    	let t3;
+    	let div5;
     	let button0;
     	let svg0;
     	let path0;
     	let polyline0;
-    	let t3;
+    	let t4;
     	let button1;
     	let svg1;
     	let path1;
     	let polyline1;
+    	let current;
     	let mounted;
     	let dispose;
+
+    	link = new Link$1({
+    			props: {
+    				class: "link-return",
+    				to: "create",
+    				$$slots: { default: [create_default_slot$2] },
+    				$$scope: { ctx }
+    			},
+    			$$inline: true
+    		});
 
     	const block = {
     		c: function create() {
     			article = element("article");
-    			div3 = element("div");
+    			div4 = element("div");
     			div0 = element("div");
+    			create_component(link.$$.fragment);
     			t0 = space();
     			div1 = element("div");
     			t1 = space();
     			div2 = element("div");
     			t2 = space();
-    			div4 = element("div");
+    			div3 = element("div");
+    			t3 = space();
+    			div5 = element("div");
     			button0 = element("button");
     			svg0 = svg_element("svg");
     			path0 = svg_element("path");
     			polyline0 = svg_element("polyline");
-    			t3 = space();
+    			t4 = space();
     			button1 = element("button");
     			svg1 = svg_element("svg");
     			path1 = svg_element("path");
     			polyline1 = svg_element("polyline");
-    			attr_dev(div0, "class", "box box1");
-    			add_location(div0, file$7, 63, 8, 1220);
-    			attr_dev(div1, "class", "box box2");
-    			add_location(div1, file$7, 64, 8, 1257);
-    			attr_dev(div2, "class", "box box3");
-    			add_location(div2, file$7, 65, 8, 1294);
-    			attr_dev(div3, "class", "box-container slides-innner");
-    			add_location(div3, file$7, 62, 1, 1170);
+    			attr_dev(div0, "class", "return");
+    			add_location(div0, file$7, 73, 8, 1412);
+    			attr_dev(div1, "class", "box box1");
+    			add_location(div1, file$7, 76, 8, 1526);
+    			attr_dev(div2, "class", "box box2");
+    			add_location(div2, file$7, 77, 8, 1563);
+    			attr_dev(div3, "class", "box box3");
+    			add_location(div3, file$7, 78, 8, 1600);
+    			attr_dev(div4, "class", "box-container slides-innner");
+    			add_location(div4, file$7, 72, 1, 1362);
     			attr_dev(path0, "stroke", "none");
     			attr_dev(path0, "d", "M0 0h24v24H0z");
     			attr_dev(path0, "fill", "none");
-    			add_location(path0, file$7, 71, 16, 1677);
+    			add_location(path0, file$7, 84, 16, 1983);
     			attr_dev(polyline0, "points", "15 6 9 12 15 18");
-    			add_location(polyline0, file$7, 72, 16, 1745);
+    			add_location(polyline0, file$7, 85, 16, 2051);
     			attr_dev(svg0, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg0, "class", "icon icon-tabler icon-tabler-chevron-left");
     			attr_dev(svg0, "width", "44");
@@ -9076,15 +9122,15 @@ var app = (function () {
     			attr_dev(svg0, "fill", "none");
     			attr_dev(svg0, "stroke-linecap", "round");
     			attr_dev(svg0, "stroke-linejoin", "round");
-    			add_location(svg0, file$7, 70, 12, 1432);
+    			add_location(svg0, file$7, 83, 12, 1738);
     			attr_dev(button0, "id", "prevButton");
-    			add_location(button0, file$7, 69, 8, 1374);
+    			add_location(button0, file$7, 82, 8, 1680);
     			attr_dev(path1, "stroke", "none");
     			attr_dev(path1, "d", "M0 0h24v24H0z");
     			attr_dev(path1, "fill", "none");
-    			add_location(path1, file$7, 77, 16, 2186);
+    			add_location(path1, file$7, 90, 16, 2492);
     			attr_dev(polyline1, "points", "9 6 15 12 9 18");
-    			add_location(polyline1, file$7, 78, 16, 2254);
+    			add_location(polyline1, file$7, 91, 16, 2560);
     			set_style(svg1, "mix-blend-mode", "difference");
     			attr_dev(svg1, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg1, "class", "icon icon-tabler icon-tabler-chevron-right");
@@ -9096,37 +9142,41 @@ var app = (function () {
     			attr_dev(svg1, "fill", "none");
     			attr_dev(svg1, "stroke-linecap", "round");
     			attr_dev(svg1, "stroke-linejoin", "round");
-    			add_location(svg1, file$7, 76, 12, 1904);
+    			add_location(svg1, file$7, 89, 12, 2210);
     			attr_dev(button1, "class", "nextImage");
     			attr_dev(button1, "id", "nextButton");
-    			add_location(button1, file$7, 75, 8, 1828);
-    			attr_dev(div4, "class", "controls");
-    			add_location(div4, file$7, 68, 4, 1343);
+    			add_location(button1, file$7, 88, 8, 2134);
+    			attr_dev(div5, "class", "controls");
+    			add_location(div5, file$7, 81, 4, 1649);
     			attr_dev(article, "class", "slider slides-container");
-    			add_location(article, file$7, 61, 0, 1127);
+    			add_location(article, file$7, 71, 0, 1319);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, article, anchor);
-    			append_dev(article, div3);
-    			append_dev(div3, div0);
-    			append_dev(div3, t0);
-    			append_dev(div3, div1);
-    			append_dev(div3, t1);
-    			append_dev(div3, div2);
-    			append_dev(article, t2);
     			append_dev(article, div4);
-    			append_dev(div4, button0);
+    			append_dev(div4, div0);
+    			mount_component(link, div0, null);
+    			append_dev(div4, t0);
+    			append_dev(div4, div1);
+    			append_dev(div4, t1);
+    			append_dev(div4, div2);
+    			append_dev(div4, t2);
+    			append_dev(div4, div3);
+    			append_dev(article, t3);
+    			append_dev(article, div5);
+    			append_dev(div5, button0);
     			append_dev(button0, svg0);
     			append_dev(svg0, path0);
     			append_dev(svg0, polyline0);
-    			append_dev(div4, t3);
-    			append_dev(div4, button1);
+    			append_dev(div5, t4);
+    			append_dev(div5, button1);
     			append_dev(button1, svg1);
     			append_dev(svg1, path1);
     			append_dev(svg1, polyline1);
+    			current = true;
 
     			if (!mounted) {
     				dispose = [
@@ -9137,11 +9187,27 @@ var app = (function () {
     				mounted = true;
     			}
     		},
-    		p: noop$2,
-    		i: noop$2,
-    		o: noop$2,
+    		p: function update(ctx, [dirty]) {
+    			const link_changes = {};
+
+    			if (dirty & /*$$scope*/ 128) {
+    				link_changes.$$scope = { dirty, ctx };
+    			}
+
+    			link.$set(link_changes);
+    		},
+    		i: function intro(local) {
+    			if (current) return;
+    			transition_in(link.$$.fragment, local);
+    			current = true;
+    		},
+    		o: function outro(local) {
+    			transition_out(link.$$.fragment, local);
+    			current = false;
+    		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(article);
+    			destroy_component(link);
     			mounted = false;
     			run_all(dispose);
     		}
@@ -9169,11 +9235,16 @@ var app = (function () {
 
     	function nextSlide() {
     		if (count == 3) {
-    			gsapWithCSS.to(".box-container", { duration: 0.3, x: 0 });
+    			gsapWithCSS.to(".box-container", { duration: 1, x: 0, ease: "expo.out" });
     			count = 1;
     			console.log(count);
     		} else {
-    			gsapWithCSS.to(".box-container", { duration: 0.3, x: -100 * count + "vw" });
+    			gsapWithCSS.to(".box-container", {
+    				duration: 1,
+    				x: -100 * count + "vw",
+    				ease: "expo.out"
+    			});
+
     			count++;
     			console.log(count);
     		}
@@ -9182,18 +9253,25 @@ var app = (function () {
     	function prevSlide() {
     		if (count == 1) {
     			(count = 3, gsapWithCSS.to(".box-container", {
-    				duration: 0.3,
-    				x: -100 * (count - 1) + "vw"
+    				duration: 1,
+    				x: -100 * (count - 1) + "vw",
+    				ease: "expo.out"
     			}));
 
     			console.log(count);
     		} else if (count == 3) {
     			count = count - 2;
-    			gsapWithCSS.to(".box-container", { duration: 0.3, x: -100 * count + "vw" });
+
+    			gsapWithCSS.to(".box-container", {
+    				duration: 1,
+    				x: -100 * count + "vw",
+    				ease: "expo.out"
+    			});
+
     			count++;
     			console.log(count);
     		} else {
-    			gsapWithCSS.to(".box-container", { duration: 0.3, x: 0 });
+    			gsapWithCSS.to(".box-container", { duration: 1, x: 0, ease: "expo.out" });
     			count = 1;
     		}
     	}
@@ -9207,6 +9285,7 @@ var app = (function () {
     	$$self.$capture_state = () => ({
     		gsap: gsapWithCSS,
     		gsapCore: gsap,
+    		Link: Link$1,
     		count,
     		nextButton,
     		prevButton,

@@ -42,6 +42,8 @@ body{
     height: 30px;
     margin-left: 20%;
     margin-top: 3.5em;
+    height: min-content;
+    
 }
 
 .button-blue{
@@ -143,8 +145,10 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: column;
-
+    min-height: 100vh;
+    @media (max-width:1396px){
+        flex-direction: column;
+    }
     .card-preview{
         width: 100%;
         margin-top: 2em;
@@ -254,6 +258,20 @@ body{
     position: absolute;
     transform-origin: 100% 100%;
 }
+
+.box-container{
+    .return{
+        position: absolute;
+        z-index: 9999;
+        left: 1%;
+        top: 3%;
+        a{
+            font-size: 40px;
+            @extend .bold;
+            color:$blue
+        }
+    }
+}
   
 .containerCard {
     display: flex;
@@ -303,3 +321,5 @@ body{
         height: min-content;
     }
 }
+
+
