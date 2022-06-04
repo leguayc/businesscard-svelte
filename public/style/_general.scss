@@ -265,10 +265,13 @@ body{
         z-index: 9999;
         left: 1%;
         top: 3%;
-        a{
+        button {
             font-size: 40px;
+            color:$blue;
+            background: none;
+            border: none;
+            cursor: pointer;
             @extend .bold;
-            color:$blue
         }
     }
 }

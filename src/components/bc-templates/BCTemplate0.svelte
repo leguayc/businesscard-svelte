@@ -1,12 +1,11 @@
 <script>
     export let cardInfo = {};
-    console.log(cardInfo);
 </script>
 
 
 <aside class="template-card-0">
     <div class="logo-card">
-        <img src={cardInfo.logo} alt="logo" />
+        <img src={cardInfo.logo ? cardInfo.logo : "./img/uber.svg"} alt="logo" />
     </div>
     <div class="infos-card">
 

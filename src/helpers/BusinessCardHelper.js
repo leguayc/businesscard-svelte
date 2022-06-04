@@ -17,7 +17,7 @@ export function getPlaceHolderOf(fieldName) {
         case "job" :
             return "Developper";
         case "logo" :
-            return "./img/uber.svg";
+            return null;
     }
 }
 

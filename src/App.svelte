@@ -8,11 +8,11 @@
 <Router>
 	<main>
 		<Route path="/">
-			<CreateCardView />
+			<HomeView />
 		</Route>
   
 		<Route path="create">
-			<HomeView />
+			<CreateCardView />
 		</Route>
 
 		<Route path="slider">

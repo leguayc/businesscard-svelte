@@ -1,12 +1,11 @@
 <script>
     export let cardInfo = {};
-    console.log(cardInfo);
 </script>
 
 
 <aside class="template-card-1">
     <div class="logo-card">
-        <img src="../img/meta.png" alt="logo" />
+        <img src={cardInfo.logo ? cardInfo.logo : "./img/meta.png"} alt="logo" />
     </div>
     <div class="infos-card">
 

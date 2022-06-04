@@ -1,7 +1,8 @@
 <script>
 import { gsap } from "gsap";
 import gsapCore from "gsap/gsap-core";
-import { Link } from "svelte-navigator";
+import { useNavigate } from "svelte-navigator";
+const navigate = useNavigate();
 
 let count = 1
 
@@ -72,7 +73,7 @@ function prevSlide(){
 <article class="slider slides-container">
 	<div class="box-container slides-innner">
         <div class="return">
-            <Link class="link-return" to="create">Back to edit</Link>
+            <button class="link-return" on:click={() => { navigate(-1); }}>Go back</button>
         </div>
         <div class="box box1"></div>
         <div class="box box2"></div>

@@ -78,7 +78,7 @@ body {
   font-family: 'Satoshi-Medium';
 }
 
-.bold, .button-custom, .home .text-home h1, .form-preview-card .form > h1, .form-preview-card .form > h2, .box-container .return a, .template-card-0 .infos-card .header-card p, .template-card-1 .infos-card .header-card p, .template-card-2 .infos-card .header-card p {
+.bold, .button-custom, .home .text-home h1, .form-preview-card .form > h1, .form-preview-card .form > h2, .box-container .return button, .template-card-0 .infos-card .header-card p, .template-card-1 .infos-card .header-card p, .template-card-2 .infos-card .header-card p {
   font-family: 'Satoshi-Bold';
 }
 
@@ -419,9 +419,12 @@ body {
   top: 3%;
 }
 
-.box-container .return a {
+.box-container .return button {
   font-size: 40px;
   color: #002F94;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .containerCard {
@@ -521,6 +524,11 @@ body {
   width: 55%;
 }
 
+.template-card-0 .logo-card img {
+  max-width: 75%;
+  max-height: 75%;
+}
+
 .template-card-0 .infos-card {
   width: 45%;
   padding-left: 26px;
@@ -615,6 +623,8 @@ body {
 
 .template-card-1 .logo-card img {
   margin-left: 13px;
+  max-width: 60%;
+  max-height: 30px;
 }
 
 .template-card-1 .infos-card {
@@ -713,6 +723,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+}
+
+.template-card-2 .logo-card img {
+  max-width: 30%;
+  max-height: 60%;
 }
 
 .template-card-2 .itmes-card-infos {

@@ -176,7 +176,7 @@
                 <div class="buttons-create-card">
                 
                 <button class="button-custom button-blue" on:click={save}>Suivant</button>
-                <Link class="button-custom button-black" to="slider">Exemples</Link> 
+                <Link class="button-custom button-black" to="/slider">Exemples</Link> 
                 </div>
              
 
