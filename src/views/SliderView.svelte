@@ -16,7 +16,7 @@ const NbItemSlider =  document.querySelectorAll('.box').length
 
 function nextSlide(){
     if (count == 3){
-    gsap.to(".box-container", {
+    gsap.to(".box", {
         duration : 1,
         x :  0,
         ease:"expo.out"
@@ -25,7 +25,7 @@ function nextSlide(){
     console.log(count);
 }else{
    
-    gsap.to(".box-container", {
+    gsap.to(".box", {
         duration : 1,
         x :  -100* count+ "vw",
                 ease:"expo.out"
@@ -39,7 +39,7 @@ function nextSlide(){
 function prevSlide(){
     if (count == 1){
     count = 3,
-    gsap.to(".box-container", {
+    gsap.to(".box", {
         duration : 1,
         x :  -100* (count-1)+ "vw",
                 ease:"expo.out"
@@ -48,7 +48,7 @@ function prevSlide(){
     console.log(count)
     }else if (count==3){
     count = count-2
-    gsap.to(".box-container", {
+    gsap.to(".box", {
         duration : 1,
         x :  -100* (count)+ "vw",
                 ease:"expo.out"
@@ -58,7 +58,7 @@ function prevSlide(){
     console.log(count)
 
     }else{
-        gsap.to(".box-container", {
+        gsap.to(".box", {
         duration : 1,
         x :  0,
                 ease:"expo.out"
