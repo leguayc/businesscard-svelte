@@ -8,7 +8,7 @@
 <Router>
 	<main>
 		<Route path="/">
-			<HomeView />
+			<SliderView />
 		</Route>
   
 		<Route path="create">

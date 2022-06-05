@@ -9060,23 +9060,23 @@ var app = (function () {
     			path1 = svg_element("path");
     			polyline1 = svg_element("polyline");
     			attr_dev(button0, "class", "link-return");
-    			add_location(button0, file$7, 75, 12, 1484);
+    			add_location(button0, file$7, 75, 12, 1434);
     			attr_dev(div0, "class", "return");
-    			add_location(div0, file$7, 74, 8, 1451);
+    			add_location(div0, file$7, 74, 8, 1401);
     			attr_dev(div1, "class", "box box1");
-    			add_location(div1, file$7, 77, 8, 1587);
+    			add_location(div1, file$7, 77, 8, 1537);
     			attr_dev(div2, "class", "box box2");
-    			add_location(div2, file$7, 78, 8, 1624);
+    			add_location(div2, file$7, 78, 8, 1574);
     			attr_dev(div3, "class", "box box3");
-    			add_location(div3, file$7, 79, 8, 1661);
+    			add_location(div3, file$7, 79, 8, 1611);
     			attr_dev(div4, "class", "box-container slides-innner");
-    			add_location(div4, file$7, 73, 1, 1401);
+    			add_location(div4, file$7, 73, 1, 1351);
     			attr_dev(path0, "stroke", "none");
     			attr_dev(path0, "d", "M0 0h24v24H0z");
     			attr_dev(path0, "fill", "none");
-    			add_location(path0, file$7, 85, 16, 2044);
+    			add_location(path0, file$7, 85, 16, 1994);
     			attr_dev(polyline0, "points", "15 6 9 12 15 18");
-    			add_location(polyline0, file$7, 86, 16, 2112);
+    			add_location(polyline0, file$7, 86, 16, 2062);
     			attr_dev(svg0, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg0, "class", "icon icon-tabler icon-tabler-chevron-left");
     			attr_dev(svg0, "width", "44");
@@ -9087,15 +9087,15 @@ var app = (function () {
     			attr_dev(svg0, "fill", "none");
     			attr_dev(svg0, "stroke-linecap", "round");
     			attr_dev(svg0, "stroke-linejoin", "round");
-    			add_location(svg0, file$7, 84, 12, 1799);
+    			add_location(svg0, file$7, 84, 12, 1749);
     			attr_dev(button1, "id", "prevButton");
-    			add_location(button1, file$7, 83, 8, 1741);
+    			add_location(button1, file$7, 83, 8, 1691);
     			attr_dev(path1, "stroke", "none");
     			attr_dev(path1, "d", "M0 0h24v24H0z");
     			attr_dev(path1, "fill", "none");
-    			add_location(path1, file$7, 91, 16, 2553);
+    			add_location(path1, file$7, 91, 16, 2503);
     			attr_dev(polyline1, "points", "9 6 15 12 9 18");
-    			add_location(polyline1, file$7, 92, 16, 2621);
+    			add_location(polyline1, file$7, 92, 16, 2571);
     			set_style(svg1, "mix-blend-mode", "difference");
     			attr_dev(svg1, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg1, "class", "icon icon-tabler icon-tabler-chevron-right");
@@ -9107,14 +9107,14 @@ var app = (function () {
     			attr_dev(svg1, "fill", "none");
     			attr_dev(svg1, "stroke-linecap", "round");
     			attr_dev(svg1, "stroke-linejoin", "round");
-    			add_location(svg1, file$7, 90, 12, 2271);
+    			add_location(svg1, file$7, 90, 12, 2221);
     			attr_dev(button2, "class", "nextImage");
     			attr_dev(button2, "id", "nextButton");
-    			add_location(button2, file$7, 89, 8, 2195);
+    			add_location(button2, file$7, 89, 8, 2145);
     			attr_dev(div5, "class", "controls");
-    			add_location(div5, file$7, 82, 4, 1710);
+    			add_location(div5, file$7, 82, 4, 1660);
     			attr_dev(article, "class", "slider slides-container");
-    			add_location(article, file$7, 72, 0, 1358);
+    			add_location(article, file$7, 72, 0, 1308);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -9185,11 +9185,11 @@ var app = (function () {
 
     	function nextSlide() {
     		if (count == 3) {
-    			gsapWithCSS.to(".box-container", { duration: 1, x: 0, ease: "expo.out" });
+    			gsapWithCSS.to(".box", { duration: 1, x: 0, ease: "expo.out" });
     			count = 1;
     			console.log(count);
     		} else {
-    			gsapWithCSS.to(".box-container", {
+    			gsapWithCSS.to(".box", {
     				duration: 1,
     				x: -100 * count + "vw",
     				ease: "expo.out"
@@ -9202,7 +9202,7 @@ var app = (function () {
 
     	function prevSlide() {
     		if (count == 1) {
-    			(count = 3, gsapWithCSS.to(".box-container", {
+    			(count = 3, gsapWithCSS.to(".box", {
     				duration: 1,
     				x: -100 * (count - 1) + "vw",
     				ease: "expo.out"
@@ -9212,7 +9212,7 @@ var app = (function () {
     		} else if (count == 3) {
     			count = count - 2;
 
-    			gsapWithCSS.to(".box-container", {
+    			gsapWithCSS.to(".box", {
     				duration: 1,
     				x: -100 * count + "vw",
     				ease: "expo.out"
@@ -9221,7 +9221,7 @@ var app = (function () {
     			count++;
     			console.log(count);
     		} else {
-    			gsapWithCSS.to(".box-container", { duration: 1, x: 0, ease: "expo.out" });
+    			gsapWithCSS.to(".box", { duration: 1, x: 0, ease: "expo.out" });
     			count = 1;
     		}
     	}
@@ -20811,29 +20811,29 @@ var app = (function () {
 
     // (10:2) <Route path="/">
     function create_default_slot_4(ctx) {
-    	let homeview;
+    	let sliderview;
     	let current;
-    	homeview = new HomeView({ $$inline: true });
+    	sliderview = new SliderView({ $$inline: true });
 
     	const block = {
     		c: function create() {
-    			create_component(homeview.$$.fragment);
+    			create_component(sliderview.$$.fragment);
     		},
     		m: function mount(target, anchor) {
-    			mount_component(homeview, target, anchor);
+    			mount_component(sliderview, target, anchor);
     			current = true;
     		},
     		i: function intro(local) {
     			if (current) return;
-    			transition_in(homeview.$$.fragment, local);
+    			transition_in(sliderview.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
-    			transition_out(homeview.$$.fragment, local);
+    			transition_out(sliderview.$$.fragment, local);
     			current = false;
     		},
     		d: function destroy(detaching) {
-    			destroy_component(homeview, detaching);
+    			destroy_component(sliderview, detaching);
     		}
     	};
 
@@ -20940,7 +20940,7 @@ var app = (function () {
     			t0 = text("Display template with the given id (");
     			t1 = text(t1_value);
     			t2 = text(")");
-    			add_location(p, file, 22, 3, 458);
+    			add_location(p, file, 22, 3, 460);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
