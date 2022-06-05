@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -486,6 +487,24 @@ body {
   height: min-content;
 }
 
+/*
+** Background des différents choix de template 
+*/
+#template0 {
+  background-image: url("../img/card1.png");
+  background-size: cover;
+}
+
+#template1 {
+  background-image: url("../img/card2.png");
+  background-size: cover;
+}
+
+#template2 {
+  background-image: url("../img/card3.png");
+  background-size: cover;
+}
+
 .business-card {
   width: 558px;
   height: 310px;
@@ -522,6 +541,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 55%;
+  max-height: 200px;
 }
 
 .template-card-0 .logo-card img {
@@ -619,6 +639,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 30%;
+  max-height: 200px;
 }
 
 .template-card-1 .logo-card img {
@@ -723,6 +744,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  max-height: 200px;
 }
 
 .template-card-2 .logo-card img {

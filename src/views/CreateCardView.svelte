@@ -169,7 +169,7 @@
                 <!-- toggle class active -->
                 <div class="containerCard">
                     {#each templates as template}
-                        <div class={template.className} on:click={() => setTemplateActive(template.id)}></div>
+                        <div id="template{template.id}" class={template.className} on:click={() => setTemplateActive(template.id)}></div>
                     {/each}
                 </div>
                 
