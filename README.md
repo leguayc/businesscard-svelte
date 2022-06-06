@@ -2,16 +2,21 @@
 
 ## Business card generator in Svelte
 
-Homepage
-Business card creation page
+- Homepage
+- Business card creation page
 - Form to complete the fields 
 - Live View
 - Several design possibilities
-Business card example carousel
-Button to download the business card in PDF
+- Business card example carousel
+- Button to download the business card in PDF
 
 
 Réalisé dans le cadre de la licence 3 à la Sorbonne | CFA des Sciences avec M. Chagnon
+
+
+
+
+
 
 
 
