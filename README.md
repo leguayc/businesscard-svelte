@@ -1,4 +1,21 @@
-*Psst �looking for a more complete solution? Check out [SvelteKit](https://kit.svelte.dev), the official framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing.*
+# Businesscard generator
+
+## Business card generator in Svelte
+
+Homepage
+Business card creation page
+- Form to complete the fields 
+- Live View
+- Several design possibilities
+Business card example carousel
+Button to download the business card in PDF
+
+
+Réalisé dans le cadre de la licence 3 à la Sorbonne | CFA des Sciences avec M. Chagnon
+
+
+
+*Psst  looking for a more complete solution? Check out [SvelteKit](https://kit.svelte.dev), the official framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing.*
 
 *Looking for a shareable component template instead? You can [use SvelteKit for that as well](https://kit.svelte.dev/docs#packaging) or the older [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
